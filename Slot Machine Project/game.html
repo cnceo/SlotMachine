@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<style>
+			body {
+				background-color: #AAA;
+			}
+			
+			.Axe {
+				background-image: url("Images/Axe.png");
+			}
+			
+			.ChestBase {
+				background-image: url("Images/ChestBase.png");
+			}
+			
+			.ChestAdvanced {
+				background-image: url("Images/ChestAdvanced.png");
+			}
+			
+			.ChestExpert {
+				background-image: url("Images/ChestExpert.png");
+			}
+			
+			.Gauntlet {
+				background-image: url("Images/Gauntlet.png");
+			}
+			
+			.Helmet {
+				background-image: url("Images/Helmet.png");
+			}
+			
+			.Orb {
+				background-image: url("Images/Orb.png");
+			}
+			
+			.Potion {
+				background-image: url("Images/Potion.png");
+			}
+			
+			.Ring {
+				background-image: url("Images/Ring.png");
+			}
+			
+			.Shield {
+				background-image: url("Images/Shield.png");
+			}
+			
+			.SpellBook {
+				background-image: url("Images/SpellBook.png");
+			}
+			
+			#Upper > div, #Middle > div, #Lower > div {
+				width: 350px;
+				height: 350px;
+				background-color: #fff;
+				border: 1px solid red;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="GameWrapper">
+			<div id="Upper">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			
+			<div id="Middle">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			
+			<div id="Lower">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+		
+		<script>
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+		
+			var all = ["Axe", "ChestBase", "ChestAdvanced", "ChestExpert", "Gauntlet", "Helmet", "Orb", "Potion", "Ring", "Shield", "SpellBook"];
+			var counter = 0;
+			var middleLineChildren = document.getElementById("Middle").children;
+			
+			while(counter < 3){
+				var randomInt = getRandomInt(0, all.length - 1);
+				middleLineChildren[counter].className = all[randomInt];
+				counter++;
+			}
+		</script>
+	</body>
+<html>
